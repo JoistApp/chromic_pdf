@@ -1,3 +1,4 @@
+# NOTICE: timeout on run_protocol/3 has changed from 5 sec to 25 sec
 defmodule ChromicPDF.Browser.SessionPool do
   @moduledoc false
 
@@ -56,7 +57,8 @@ defmodule ChromicPDF.Browser.SessionPool do
         result = Channel.run_protocol(channel, protocol, timeout)
 
         {result, :ok}
-      end
+      end,
+      25_000
     )
   end
 
