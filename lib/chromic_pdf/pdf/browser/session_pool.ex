@@ -1,3 +1,4 @@
+# NOTICE: @default_timeout has changed from 5 sec to 25 sec
 # NOTICE: timeout on run_protocol/3 has changed from 5 sec to 25 sec
 defmodule ChromicPDF.Browser.SessionPool do
   @moduledoc false
@@ -9,7 +10,7 @@ defmodule ChromicPDF.Browser.SessionPool do
   alias ChromicPDF.Browser.Channel
   alias ChromicPDF.{CloseTarget, Protocol, SpawnSession}
 
-  @default_timeout 5000
+  @default_timeout 25000
   @default_max_session_uses 1000
 
   @type pool_state :: %{
